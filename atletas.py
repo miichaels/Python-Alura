@@ -38,7 +38,6 @@ atletas = [
     print(f"Peso: {atleta[2]} kg")
 """
 
-
 # Lista para armazenar as tuplas
 atletas_tuplas = []
 
