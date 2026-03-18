@@ -41,7 +41,6 @@ classificacao_livros = [
     (livro[0], "Clássico" if livro[1] < 2000 else "Moderno")
     for livro in livros
 ]
-
 print("Classificação dos livros:")
 print(classificacao_livros)
 
