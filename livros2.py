@@ -13,11 +13,16 @@ livros = [
     ("O Código Da Vinci", "Dan Brown", 2003),
 ]
 
-catalogos = []
+catalogos = {}
 
 for livro in livros:
+    titulo = livro[0]
     autor = livro[1]
     ano = livro[2]
+
+    catalogos[titulo] = {"autor": autor, "ano": ano }
+print(catalogos, "\n")
+
 
 
 # list comprehension
