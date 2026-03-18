@@ -76,3 +76,43 @@ atletas_sobrepeso = [atleta[0] for atleta in atletas if (atleta[2] / (atleta[1] 
 print("Atletas com IMC maior que 25:")
 print(atletas_sobrepeso)
 
+# lista_imc = [atleta [0]for atleta in atletas if (atleta[2] / (atleta[1] ** 2)) > 23] else
+
+lista_imcAcima = []
+lista_imcOk = []
+classificacao_imcs = []
+
+for atleta in atletas:
+    if atleta[2] / (atleta[1] ** 2) >= 23:
+        lista_imcAcima.append(atleta)
+    else:
+        lista_imcOk.append(atleta)
+
+print(f"Atletas com o IMC > que 25 {lista_imcAcima}")
+print(f"Atletas com o IMC < que 25 {lista_imcOk}")
+
+
+
+for atleta in atletas:
+    imc = atleta[2] / (atleta[1] ** 2)
+
+    if imc >= 24:
+        lista_imcAcima.append(atleta)
+    else:
+        lista_imcOk.append(atleta)
+
+    classificacao_imcs.append((atleta[0], "Sobrepeso" if imc >= 25 else "Peso Normal"))
+
+print(classificacao_imcs)
+
+# ------------
+
+# Classificação dos atletas com base no IMC
+classificacao_imc = [
+    (atleta[0], "Sobrepeso" if (atleta[2] / (atleta[1] ** 2)) > 25 else "Peso Normal")
+    for atleta in atletas
+]
+
+# Impressão do resultado
+print("Classificação dos atletas:")
+print(classificacao_imc)
