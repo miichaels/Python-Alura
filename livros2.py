@@ -71,5 +71,32 @@ livros_antigos = {
     if info["ano"] < 1950
 }
 
-print("\nLivros antigos")
+print("\nLivros antigos <1950")
 pprint(livros_antigos, sort_dicts=False)
+
+
+# list comprehension
+#Visualizar anos desde a publicação até hoje
+livros_atualizados = {
+    titulo: {"autor": info["autor"], "ano": 2026 - info["ano"]}
+    for titulo, info in catalogo_impresso.items()
+}
+
+print(f"\nLivros atualizados: ")
+pprint(livros_atualizados, sort_dicts=False)
+
+
+#logica sem comprehension
+livros_atualizados = {}
+
+for titulo, info in catalogo_impresso.items():
+    autor = info["autor"]
+    anos_desde_publicacao = 2026 - info["ano"]
+
+    livros_atualizados[titulo] = {
+        "autor": autor,
+        "ano": anos_desde_publicacao,
+    }
+
+print(f"Livros atualizados:")
+pprint(livros_atualizados, sort_dicts=False)
