@@ -8,7 +8,6 @@ for _ in range(3):
 print("Você digitou:", numero)
 
 
-
 #loop irá rodar até obter um numero positivo
 numero = -1
 while numero <= 0:
