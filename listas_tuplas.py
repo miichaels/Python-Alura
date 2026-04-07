@@ -14,7 +14,7 @@ for lista in lista_de_compras:
 
 
 
-# Definindo uma tupla de coordenadas geográficas
+# Definindo uma tupla de coordenadas geográficas  (Fixa)
 coordenadas_gps = (40.7128, -74.0060)
 
 # Exibindo as coordenadas
