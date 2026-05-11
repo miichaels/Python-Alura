@@ -12,7 +12,6 @@ print(calcular_taxa(entreg))
 
 #-------------------------------------
 #Adicionando taxa extra
-
 chovendo = (input("Está chovendo? (yes/no): "))
 if chovendo == "yes":
     print(True)
